@@ -14,8 +14,9 @@
 		5D1AB22427D71ECE00B0CB53 /* PrioriTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB22227D71ECE00B0CB53 /* PrioriTask.xcdatamodeld */; };
 		5D1AB22627D71ECF00B0CB53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1AB22527D71ECF00B0CB53 /* Assets.xcassets */; };
 		5D1AB22927D71ECF00B0CB53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1AB22727D71ECF00B0CB53 /* LaunchScreen.storyboard */; };
-		5D1AB23227D7214000B0CB53 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB23027D7214000B0CB53 /* ToDoListItem+CoreDataClass.swift */; };
-		5D1AB23327D7214000B0CB53 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB23127D7214000B0CB53 /* ToDoListItem+CoreDataProperties.swift */; };
+		5D1AB23A27D72FE100B0CB53 /* Datacenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB23927D72FE100B0CB53 /* Datacenter.swift */; };
+		5D1AB23F27D732B200B0CB53 /* ToDoListItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB23D27D732B200B0CB53 /* ToDoListItem+CoreDataClass.swift */; };
+		5D1AB24027D732B200B0CB53 /* ToDoListItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1AB23E27D732B200B0CB53 /* ToDoListItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +29,9 @@
 		5D1AB22527D71ECF00B0CB53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1AB22827D71ECF00B0CB53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1AB22A27D71ECF00B0CB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D1AB23027D7214000B0CB53 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5D1AB23127D7214000B0CB53 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D1AB23927D72FE100B0CB53 /* Datacenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datacenter.swift; sourceTree = "<group>"; };
+		5D1AB23D27D732B200B0CB53 /* ToDoListItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D1AB23E27D732B200B0CB53 /* ToDoListItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +77,8 @@
 		5D1AB23427D7216B00B0CB53 /* ToDoListItem */ = {
 			isa = PBXGroup;
 			children = (
-				5D1AB23027D7214000B0CB53 /* ToDoListItem+CoreDataClass.swift */,
-				5D1AB23127D7214000B0CB53 /* ToDoListItem+CoreDataProperties.swift */,
+				5D1AB23D27D732B200B0CB53 /* ToDoListItem+CoreDataClass.swift */,
+				5D1AB23E27D732B200B0CB53 /* ToDoListItem+CoreDataProperties.swift */,
 			);
 			path = ToDoListItem;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 			children = (
 				5D1AB23427D7216B00B0CB53 /* ToDoListItem */,
 				5D1AB22227D71ECE00B0CB53 /* PrioriTask.xcdatamodeld */,
+				5D1AB23927D72FE100B0CB53 /* Datacenter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,9 +192,10 @@
 			files = (
 				5D1AB21E27D71ECE00B0CB53 /* ViewController.swift in Sources */,
 				5D1AB21A27D71ECE00B0CB53 /* AppDelegate.swift in Sources */,
+				5D1AB23F27D732B200B0CB53 /* ToDoListItem+CoreDataClass.swift in Sources */,
+				5D1AB23A27D72FE100B0CB53 /* Datacenter.swift in Sources */,
 				5D1AB21C27D71ECE00B0CB53 /* SceneDelegate.swift in Sources */,
-				5D1AB23227D7214000B0CB53 /* ToDoListItem+CoreDataClass.swift in Sources */,
-				5D1AB23327D7214000B0CB53 /* ToDoListItem+CoreDataProperties.swift in Sources */,
+				5D1AB24027D732B200B0CB53 /* ToDoListItem+CoreDataProperties.swift in Sources */,
 				5D1AB22427D71ECE00B0CB53 /* PrioriTask.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

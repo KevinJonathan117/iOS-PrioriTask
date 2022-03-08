@@ -2,9 +2,13 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D49" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ToDoListItem" representedClassName="ToDoListItem" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="priority" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ToDoListItem" positionX="-63" positionY="-18" width="128" height="59"/>
+        <element name="ToDoListItem" positionX="-63" positionY="-18" width="128" height="119"/>
     </elements>
 </model>

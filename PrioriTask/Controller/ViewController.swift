@@ -17,8 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return table
     }()
     
-    private var models = [ToDoListItem]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "To Do List"
@@ -38,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
                 return
             }
-            self?.createItem(name: text)
+            self?.createItem(name: text, dueDate: Date(), priority: "High", notes: "", isDone: false)
         }))
         
         present(alert, animated: true)
@@ -52,6 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.name
+        
         return cell
     }
     
@@ -68,7 +67,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 guard let field = alert.textFields?.first, let newName = field.text, !newName.isEmpty else {
                     return
                 }
-                self?.updateItem(item: item, newName: newName)
+                self?.updateItem(item: item, newName: newName, newDueDate: Date(), newPriority: "High", newNotes: "", newIsDone: false)
             }))
             
             self.present(alert, animated: true)
@@ -94,10 +93,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func createItem(name: String) {
+    func createItem(name: String, dueDate: Date, priority: String, notes: String, isDone: Bool) {
         let newItem = ToDoListItem(context: context)
         newItem.name = name
         newItem.createdAt = Date()
+        newItem.dueDate = dueDate
+        newItem.priority = priority
+        newItem.notes = notes
+        newItem.isDone = isDone
         
         do {
             try context.save()
@@ -118,8 +121,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    func updateItem(item: ToDoListItem, newName: String) {
+    func updateItem(item: ToDoListItem, newName: String, newDueDate: Date, newPriority: String, newNotes: String, newIsDone: Bool) {
         item.name = newName
+        item.dueDate = newDueDate
+        item.priority = newPriority
+        item.notes = newNotes
+        item.isDone = newIsDone
         do {
             try context.save()
             getAllItems()
